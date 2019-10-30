@@ -26,7 +26,7 @@ export class Store {
     );
 
     // Redux Dev Tools
-    // win.devTools = win.__REDUX_DEVTOOLS_EXTENSION__.connect();
+    win.devTools = win.__REDUX_DEVTOOLS_EXTENSION__.connect();
   }
 
   select(path: string) {
@@ -39,7 +39,6 @@ export class Store {
 }
 
 /// CUSTOM Rx Operators
-
 export const reducer = () =>
   scan<any>((state, action) => {
     let next;
@@ -58,7 +57,7 @@ export const reducer = () =>
         break;
     }
 
-    // win.devTools.send(action.type, next);
+    win.devTools.send(action.type, next);
 
     return next;
   }, {});
