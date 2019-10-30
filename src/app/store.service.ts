@@ -26,6 +26,7 @@ export class Store {
     );
 
     // Redux Dev Tools
+    // MAKE SURE YOU HAVE THE REDUX DEV TOOLS INSTALLED!!
     win.devTools = win.__REDUX_DEVTOOLS_EXTENSION__.connect();
   }
 
